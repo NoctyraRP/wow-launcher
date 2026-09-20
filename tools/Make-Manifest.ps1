@@ -37,12 +37,20 @@ if ($Template -and (Test-Path $Template)) {
     }
 }
 
+# Locale codes WoW uses; a patch whose name contains one goes in Data\<locale>\ (higher load priority),
+# everything else goes in Data\ (global). e.g. patch-enUS-4.MPQ -> "enUS",  patch-9.MPQ -> ""
+$locales = 'enUS','enGB','deDE','frFR','esES','esMX','ruRU','koKR','zhCN','zhTW','ptBR','itIT'
+
 $patches = @()
 Get-ChildItem -Path $PatchFolder -Filter $Filter -File | Sort-Object Name | ForEach-Object {
-    Write-Host ("Hashing {0} ({1:N1} MB)..." -f $_.Name, ($_.Length/1MB))
+    $dest = ""
+    foreach ($loc in $locales) { if ($_.Name -match $loc) { $dest = $loc; break } }
+    $where = if ($dest) { "Data\$dest\" } else { "Data\" }
+    Write-Host ("Hashing {0} ({1:N1} MB) -> {2}" -f $_.Name, ($_.Length/1MB), $where)
     $md5 = (Get-FileHash -Path $_.FullName -Algorithm MD5).Hash.ToLower()
     $patches += [pscustomobject]@{
         file = $_.Name
+        dest = $dest
         url  = "$BaseUrl/$($_.Name)"
         md5  = $md5
         size = $_.Length

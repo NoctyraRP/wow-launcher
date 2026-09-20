@@ -24,7 +24,15 @@
   "patches": [
     {
       "file": "patch-4.MPQ",
+      "dest": "",
       "url":  "https://github.com/USER/REPO/releases/download/patches/patch-4.MPQ",
+      "md5":  "0000000000000000000000000000000000000000000000000000000000000000",
+      "size": 0
+    },
+    {
+      "file": "patch-enUS-4.MPQ",
+      "dest": "enUS",
+      "url":  "https://github.com/USER/REPO/releases/download/patches/patch-enUS-4.MPQ",
       "md5":  "0000000000000000000000000000000000000000000000000000000000000000",
       "size": 0
     }

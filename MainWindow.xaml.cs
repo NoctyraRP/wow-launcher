@@ -142,7 +142,7 @@ public partial class MainWindow : Window
         {
             idx++;
             SetProgress($"Verifying {p.File} ({idx}/{m.Patches.Count})...", null);
-            var local = Path.Combine(_dataPath, p.File);
+            var local = Path.Combine(_dataPath, p.Dest, p.File);
             if (!File.Exists(local))
             {
                 toDownload.Add(p);
@@ -169,7 +169,9 @@ public partial class MainWindow : Window
 
     private async Task DownloadPatchAsync(PatchItem p, int index, int total)
     {
-        var dest = Path.Combine(_dataPath, p.File);
+        var targetDir = Path.Combine(_dataPath, p.Dest);
+        Directory.CreateDirectory(targetDir);
+        var dest = Path.Combine(targetDir, p.File);
         var tmp = dest + ".part";
 
         using var resp = await Http.GetAsync(p.Url, HttpCompletionOption.ResponseHeadersRead);

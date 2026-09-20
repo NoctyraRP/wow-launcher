@@ -20,6 +20,7 @@
     "patches":  [
                     {
                         "file":  "patch-9.MPQ",
+                        "dest":  "",
                         "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-9.MPQ",
                         "md5":  "c515f962878b2de1da1cbf307fe3638a",
                         "size":  42402228

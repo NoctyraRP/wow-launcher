@@ -24,8 +24,10 @@ public class NewsItem
 
 public class PatchItem
 {
-    /// <summary>Filename as it must appear in the client's Data folder, e.g. "patch-4.MPQ".</summary>
+    /// <summary>Filename as it must appear in the client, e.g. "patch-4.MPQ" or "patch-enUS-4.MPQ".</summary>
     [JsonPropertyName("file")] public string File { get; set; } = "";
+    /// <summary>Subfolder under Data to place the file in. "" = Data\ (global), "enUS" = Data\enUS\ (locale).</summary>
+    [JsonPropertyName("dest")] public string Dest { get; set; } = "";
     /// <summary>Direct download URL (e.g. a GitHub release asset).</summary>
     [JsonPropertyName("url")]  public string Url  { get; set; } = "";
     /// <summary>MD5 of the file (lowercase hex). Used to detect changes.</summary>

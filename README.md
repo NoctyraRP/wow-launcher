@@ -100,6 +100,10 @@ Ship that `WowLauncher.exe` + `launcher.json` inside the WoW client folder and g
 
 - The manifest source can also be a **local or network path** (e.g. `\\PC\share\manifest.json`
   or `D:\...\manifest.json`) instead of an HTTPS URL — handy for LAN servers or testing.
-- Patch filenames must match what the WoW client expects in `Data\` (e.g. `patch-4.MPQ`,
-  `patch-A.MPQ`). The client loads numbered patches, then lettered ones (later overrides earlier).
+- Patch filenames must match what the WoW client expects (e.g. `patch-4.MPQ`, `patch-A.MPQ`).
+  The client loads numbered patches, then lettered ones (later overrides earlier).
+- **Global vs locale patches:** files go in `Data\` by default. A patch with a locale code in its
+  name (e.g. `patch-enUS-4.MPQ`) is placed in `Data\enUS\`, which has **higher load priority** —
+  use it when you need to override Blizzard files (some DBC edits, etc.). `Make-Manifest.ps1`
+  auto-detects this and sets each patch's `"dest"` field (`""` = `Data\`, `"enUS"` = `Data\enUS\`).
 - The launcher writes `realmlist.wtf` into every locale folder it finds under `Data\`.
