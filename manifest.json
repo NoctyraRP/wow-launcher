@@ -1,0 +1,21 @@
+{
+  "serverName": "Noctyra",
+  "realmlist": "127.0.0.1",
+  "statusHost": "127.0.0.1",
+  "statusPort": 3724,
+  "registerUrl": "",
+  "websiteUrl": "",
+  "news": [
+    {
+      "date": "2026-09-20",
+      "title": "Welcome to Noctyra",
+      "body": "The launcher is live. Create an account, press Play, and step into Azeroth. Custom content will download automatically when it's released."
+    },
+    {
+      "date": "2026-09-20",
+      "title": "Auto-updates enabled",
+      "body": "Whenever new custom patches drop, this launcher fetches them for you before the game starts. No manual downloads."
+    }
+  ],
+  "patches": []
+}

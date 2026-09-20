@@ -1,0 +1,8 @@
+{
+  "_comment": "Local launcher settings. Ships NEXT TO WowLauncher.exe. Edit freely - no recompile.",
+
+  "manifestUrl": "https://raw.githubusercontent.com/NoctyraRP/wow-launcher/main/manifest.json",
+
+  "_gamePath_note": "EMPTY = launcher uses its own folder as the game folder (correct when the exe lives in the WoW client folder). Set an explicit path only for testing from the build output.",
+  "gamePath": ""
+}

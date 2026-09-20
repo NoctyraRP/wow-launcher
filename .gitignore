@@ -1,0 +1,11 @@
+# Build output
+bin/
+obj/
+
+# VS / user files
+*.user
+.vs/
+
+# Local overrides (each player/machine can have its own; the exe still ships with one)
+# launcher.json is committed as the default; uncomment to keep local copies out:
+# launcher.json

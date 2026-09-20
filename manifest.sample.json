@@ -1,0 +1,32 @@
+{
+  "serverName": "My WoW Server",
+  "realmlist": "127.0.0.1",
+
+  "statusHost": "127.0.0.1",
+  "statusPort": 3724,
+
+  "registerUrl": "https://your-site.example/register",
+  "websiteUrl":  "https://your-site.example",
+
+  "news": [
+    {
+      "date": "2026-09-20",
+      "title": "Server is live!",
+      "body": "Welcome. Create an account, set your realmlist to 127.0.0.1, and jump in."
+    },
+    {
+      "date": "2026-09-18",
+      "title": "How updates work",
+      "body": "This launcher keeps your custom patches up to date automatically. Just press Play."
+    }
+  ],
+
+  "patches": [
+    {
+      "file": "patch-4.MPQ",
+      "url":  "https://github.com/USER/REPO/releases/download/patches/patch-4.MPQ",
+      "md5":  "0000000000000000000000000000000000000000000000000000000000000000",
+      "size": 0
+    }
+  ]
+}

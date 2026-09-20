@@ -1,0 +1,74 @@
+<Application x:Class="WowLauncher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Colors -->
+        <SolidColorBrush x:Key="Bg"        Color="#0E1116"/>
+        <SolidColorBrush x:Key="Panel"     Color="#171C24"/>
+        <SolidColorBrush x:Key="PanelEdge" Color="#252C38"/>
+        <SolidColorBrush x:Key="Text"      Color="#E6EAF0"/>
+        <SolidColorBrush x:Key="TextDim"   Color="#8A94A6"/>
+        <SolidColorBrush x:Key="Accent"    Color="#C8A24B"/>
+        <SolidColorBrush x:Key="AccentHi"  Color="#E4BE63"/>
+        <SolidColorBrush x:Key="Online"    Color="#4CAF6E"/>
+        <SolidColorBrush x:Key="Offline"   Color="#C0554E"/>
+
+        <!-- Big gold Play button -->
+        <Style x:Key="PlayButton" TargetType="Button">
+            <Setter Property="Foreground" Value="#1A1200"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="b" CornerRadius="6" Padding="0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="#E4BE63" Offset="0"/>
+                                    <GradientStop Color="#C8A24B" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="b" Property="Background" Value="#F0CE73"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="b" Property="Background" Value="#4A4636"/>
+                                <Setter Property="Foreground" Value="#8A8470"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Flat secondary button -->
+        <Style x:Key="FlatButton" TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource Text}"/>
+            <Setter Property="Background" Value="#20283340"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="b" CornerRadius="4" BorderThickness="1"
+                                BorderBrush="{StaticResource PanelEdge}" Background="{TemplateBinding Background}"
+                                Padding="10,6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="b" Property="Background" Value="#2A3442"/>
+                                <Setter TargetName="b" Property="BorderBrush" Value="{StaticResource Accent}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
