@@ -9,3 +9,6 @@ obj/
 # Local overrides (each player/machine can have its own; the exe still ships with one)
 # launcher.json is committed as the default; uncomment to keep local copies out:
 # launcher.json
+
+# Local staging area for patch MPQs (these are published as GitHub Release assets, not committed)
+patches/
