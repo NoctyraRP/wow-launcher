@@ -1,0 +1,21 @@
+{
+  "serverName": "My WoW Server",
+  "realmlist": "127.0.0.1",
+  "statusHost": "127.0.0.1",
+  "statusPort": 3724,
+  "registerUrl": "",
+  "websiteUrl": "",
+  "news": [
+    {
+      "date": "2026-09-20",
+      "title": "Your launcher works!",
+      "body": "This news feed, the online/offline light, the realmlist and the Play button are all driven by manifest.json. Edit this file (or host it on GitHub) to change what everyone sees."
+    },
+    {
+      "date": "2026-09-20",
+      "title": "Auto-updates are ready",
+      "body": "Add entries to the \"patches\" list (use tools\\Make-Manifest.ps1) and the launcher will download changed MPQs into the client's Data folder before launching."
+    }
+  ],
+  "patches": []
+}
