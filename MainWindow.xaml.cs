@@ -73,14 +73,19 @@ public partial class MainWindow : Window
         bool isLocal = source.StartsWith("file:", StringComparison.OrdinalIgnoreCase)
                        || source.StartsWith(@"\\")
                        || (source.Length > 1 && source[1] == ':');
+        string text;
         if (isLocal)
         {
             var path = source.StartsWith("file:", StringComparison.OrdinalIgnoreCase)
                 ? new Uri(source).LocalPath
                 : source;
-            return await File.ReadAllTextAsync(path);
+            text = await File.ReadAllTextAsync(path);
         }
-        return await Http.GetStringAsync(source);
+        else
+        {
+            text = await Http.GetStringAsync(source);
+        }
+        return text.TrimStart('﻿'); // tolerate a UTF-8 BOM in the manifest
     }
 
     // ---------- Config ----------

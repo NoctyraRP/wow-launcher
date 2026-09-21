@@ -78,6 +78,8 @@ foreach ($rf in $RootFiles) {
 }
 
 $manifest.patches = $patches
-$manifest | ConvertTo-Json -Depth 6 | Out-File -FilePath $Output -Encoding utf8
+# Write UTF-8 WITHOUT BOM (PS 5.1 Out-File -Encoding utf8 adds a BOM, which some JSON parsers reject).
+$json = $manifest | ConvertTo-Json -Depth 6
+[System.IO.File]::WriteAllText($Output, $json, (New-Object System.Text.UTF8Encoding($false)))
 Write-Host ""
 Write-Host ("Wrote {0} with {1} patch entr{2}." -f $Output, $patches.Count, $(if($patches.Count -eq 1){'y'}else{'ies'})) -ForegroundColor Green
