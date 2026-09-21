@@ -31,8 +31,8 @@
                         "dest":  "",
                         "root":  false,
                         "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-C.MPQ",
-                        "md5":  "535281a2479b7b906bb3c8602e589a4e",
-                        "size":  59900514
+                        "md5":  "f647c8cf6c0f1ba87a4e75d6be1be11b",
+                        "size":  64411108
                     },
                     {
                         "file":  "Wow.exe",
