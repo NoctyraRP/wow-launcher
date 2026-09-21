@@ -18,7 +18,10 @@ param(
     [Parameter(Mandatory=$true)] [string]$BaseUrl,
     [string]$Template = "",
     [string]$Output = "manifest.json",
-    [string]$Filter = "*.MPQ"
+    [string]$Filter = "*.MPQ",
+    # Files that must land in the GAME ROOT (next to Wow.exe), not under Data\.
+    # e.g. the patched Wow.exe and AwesomeWotlkLib.dll. Pass full paths.
+    [string[]]$RootFiles = @()
 )
 
 $ErrorActionPreference = 'Stop'
@@ -51,9 +54,26 @@ Get-ChildItem -Path $PatchFolder -Filter $Filter -File | Sort-Object Name | ForE
     $patches += [pscustomobject]@{
         file = $_.Name
         dest = $dest
+        root = $false
         url  = "$BaseUrl/$($_.Name)"
         md5  = $md5
         size = $_.Length
+    }
+}
+
+# Root files: placed next to Wow.exe (game root), not under Data\.
+foreach ($rf in $RootFiles) {
+    if (-not (Test-Path $rf)) { throw "Root file not found: $rf" }
+    $item = Get-Item $rf
+    Write-Host ("Hashing {0} ({1:N1} MB) -> game root" -f $item.Name, ($item.Length/1MB))
+    $md5 = (Get-FileHash -Path $item.FullName -Algorithm MD5).Hash.ToLower()
+    $patches += [pscustomobject]@{
+        file = $item.Name
+        dest = ""
+        root = $true
+        url  = "$BaseUrl/$($item.Name)"
+        md5  = $md5
+        size = $item.Length
     }
 }
 

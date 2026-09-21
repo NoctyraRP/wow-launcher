@@ -26,8 +26,10 @@ public class PatchItem
 {
     /// <summary>Filename as it must appear in the client, e.g. "patch-4.MPQ" or "patch-enUS-4.MPQ".</summary>
     [JsonPropertyName("file")] public string File { get; set; } = "";
-    /// <summary>Subfolder under Data to place the file in. "" = Data\ (global), "enUS" = Data\enUS\ (locale).</summary>
+    /// <summary>Subfolder to place the file in. When root=false this is under Data\ ("" = Data\, "enUS" = Data\enUS\). When root=true it is under the game folder itself ("" = game root, next to Wow.exe).</summary>
     [JsonPropertyName("dest")] public string Dest { get; set; } = "";
+    /// <summary>When true, place the file relative to the game folder (root) instead of under Data\. Used for Wow.exe and helper DLLs.</summary>
+    [JsonPropertyName("root")] public bool Root { get; set; } = false;
     /// <summary>Direct download URL (e.g. a GitHub release asset).</summary>
     [JsonPropertyName("url")]  public string Url  { get; set; } = "";
     /// <summary>MD5 of the file (lowercase hex). Used to detect changes.</summary>

@@ -19,11 +19,36 @@
              ],
     "patches":  [
                     {
-                        "file":  "patch-9.MPQ",
+                        "file":  "patch-A.MPQ",
                         "dest":  "",
-                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-9.MPQ",
-                        "md5":  "c515f962878b2de1da1cbf307fe3638a",
-                        "size":  42402228
+                        "root":  false,
+                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-A.MPQ",
+                        "md5":  "b0cd8602cfe2a9d9d6975693eee1c173",
+                        "size":  201339462
+                    },
+                    {
+                        "file":  "patch-C.MPQ",
+                        "dest":  "",
+                        "root":  false,
+                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-C.MPQ",
+                        "md5":  "535281a2479b7b906bb3c8602e589a4e",
+                        "size":  59900514
+                    },
+                    {
+                        "file":  "Wow.exe",
+                        "dest":  "",
+                        "root":  true,
+                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/Wow.exe",
+                        "md5":  "a15e2afe4c17002ea6a6c49d9cd54f62",
+                        "size":  7704216
+                    },
+                    {
+                        "file":  "AwesomeWotlkLib.dll",
+                        "dest":  "",
+                        "root":  true,
+                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/AwesomeWotlkLib.dll",
+                        "md5":  "20006cf9e525cf2d96701b005c4314e9",
+                        "size":  176640
                     }
                 ]
 }
