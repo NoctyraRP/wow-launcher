@@ -31,8 +31,8 @@
                         "dest":  "enUS",
                         "root":  false,
                         "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-enUS-4.MPQ",
-                        "md5":  "d4298ad87f1c6bccc53c750ee4fc5772",
-                        "size":  186186
+                        "md5":  "db21a1a6e745c6bdbab2d01a4579eecb",
+                        "size":  193364
                     },
                     {
                         "file":  "Wow.exe",
