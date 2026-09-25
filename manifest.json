@@ -23,16 +23,16 @@
                         "dest":  "",
                         "root":  false,
                         "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-C.MPQ",
-                        "md5":  "c57621b6a9dda2d629882d29d62ec61f",
-                        "size":  95079443
+                        "md5":  "e36d86e25687edce4d1da3b6e68803a4",
+                        "size":  96013765
                     },
                     {
                         "file":  "patch-enUS-4.MPQ",
                         "dest":  "enUS",
                         "root":  false,
                         "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-enUS-4.MPQ",
-                        "md5":  "6aecf7e68426ef67eb5c6fd6ad4fc108",
-                        "size":  4381123
+                        "md5":  "5694d08b7c1404fd3055214b7bc14459",
+                        "size":  4871800
                     },
                     {
                         "file":  "Wow.exe",
