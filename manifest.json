@@ -39,14 +39,14 @@
                         "dest":  "",
                         "root":  true,
                         "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/Wow.exe",
-                        "md5":  "a15e2afe4c17002ea6a6c49d9cd54f62",
+                        "md5":  "9aac746787b14d51ec1101b1b9bac8eb",
                         "size":  7704216
                     },
                     {
-                        "file":  "AwesomeWotlkLib.dll",
+                        "file":  "NoctyraCore.dll",
                         "dest":  "",
                         "root":  true,
-                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/AwesomeWotlkLib.dll",
+                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/NoctyraCore.dll",
                         "md5":  "20006cf9e525cf2d96701b005c4314e9",
                         "size":  176640
                     }
