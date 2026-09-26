@@ -1,54 +1,54 @@
 {
-    "serverName":  "Noctyra",
-    "realmlist":  "127.0.0.1",
-    "statusHost":  "127.0.0.1",
-    "statusPort":  3724,
-    "registerUrl":  "",
-    "websiteUrl":  "",
-    "news":  [
-                 {
-                     "date":  "2026-09-20",
-                     "title":  "Welcome to Noctyra",
-                     "body":  "The launcher is live. Create an account, press Play, and step into Azeroth. Custom content will download automatically when it\u0027s released."
-                 },
-                 {
-                     "date":  "2026-09-20",
-                     "title":  "Auto-updates enabled",
-                     "body":  "Whenever new custom patches drop, this launcher fetches them for you before the game starts. No manual downloads."
-                 }
-             ],
-    "patches":  [
-                    {
-                        "file":  "patch-C.MPQ",
-                        "dest":  "",
-                        "root":  false,
-                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-C.MPQ",
-                        "md5":  "bb72b7ec9157b03d8374206d12b26f6f",
-                        "size":  96044169
-                    },
-                    {
-                        "file":  "patch-enUS-4.MPQ",
-                        "dest":  "enUS",
-                        "root":  false,
-                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-enUS-4.MPQ",
-                        "md5":  "5694d08b7c1404fd3055214b7bc14459",
-                        "size":  4871800
-                    },
-                    {
-                        "file":  "Wow.exe",
-                        "dest":  "",
-                        "root":  true,
-                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/Wow.exe",
-                        "md5":  "9aac746787b14d51ec1101b1b9bac8eb",
-                        "size":  7704216
-                    },
-                    {
-                        "file":  "NoctyraCore.dll",
-                        "dest":  "",
-                        "root":  true,
-                        "url":  "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/NoctyraCore.dll",
-                        "md5":  "20006cf9e525cf2d96701b005c4314e9",
-                        "size":  176640
-                    }
-                ]
+    "serverName": "Noctyra",
+    "realmlist": "127.0.0.1",
+    "statusHost": "127.0.0.1",
+    "statusPort": 3724,
+    "registerUrl": "",
+    "websiteUrl": "",
+    "news": [
+        {
+            "date": "2026-09-20",
+            "title": "Welcome to Noctyra",
+            "body": "The launcher is live. Create an account, press Play, and step into Azeroth. Custom content will download automatically when it's released."
+        },
+        {
+            "date": "2026-09-20",
+            "title": "Auto-updates enabled",
+            "body": "Whenever new custom patches drop, this launcher fetches them for you before the game starts. No manual downloads."
+        }
+    ],
+    "patches": [
+        {
+            "file": "patch-C.MPQ",
+            "dest": "",
+            "root": false,
+            "url": "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-C.MPQ",
+            "md5": "8342b1680ad787131ef041f008face64",
+            "size": 121158464
+        },
+        {
+            "file": "patch-enUS-4.MPQ",
+            "dest": "enUS",
+            "root": false,
+            "url": "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/patch-enUS-4.MPQ",
+            "md5": "2031b12f855e818d90a945a47caf89f3",
+            "size": 4892129
+        },
+        {
+            "file": "Wow.exe",
+            "dest": "",
+            "root": true,
+            "url": "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/Wow.exe",
+            "md5": "9aac746787b14d51ec1101b1b9bac8eb",
+            "size": 7704216
+        },
+        {
+            "file": "NoctyraCore.dll",
+            "dest": "",
+            "root": true,
+            "url": "https://github.com/NoctyraRP/wow-launcher/releases/download/patches/NoctyraCore.dll",
+            "md5": "20006cf9e525cf2d96701b005c4314e9",
+            "size": 176640
+        }
+    ]
 }
